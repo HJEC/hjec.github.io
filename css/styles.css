@@ -147,7 +147,7 @@ p a {
   max-height: 400px; }
 
 .fa-chevron-down {
-  transform: translate(-50%, -50%);
+  transform: translateY(-100%);
   font-size: 3rem;
   color: #ffa500;
   animation: chevron-slide 3s ease-in-out infinite;
@@ -160,7 +160,7 @@ p a {
 
 @keyframes chevron-slide {
   50% {
-    transform: translate(-50%, 10px);
+    transform: translateY(0%);
     opacity: 1; } }
 
 .accordion {
