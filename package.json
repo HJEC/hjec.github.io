@@ -21,13 +21,11 @@
     "url": "https://github.com/HJEC/my-site/issues"
   },
   "homepage": "https://github.com/HJEC/my-site#readme",
-  "dependencies": {
-    "express": "^4.17.1",
-    "gulp-sass": "^4.1.0",
-    "gulp-uglifycss": "^1.1.0"
-  },
+  "dependencies": {},
   "devDependencies": {
     "browser-sync": "^2.26.12",
-    "gulp": "^4.0.2"
+    "gulp": "^4.0.2",
+    "gulp-sass": "^4.1.0",
+    "gulp-uglifycss": "^1.1.0"
   }
 }
