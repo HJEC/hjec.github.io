@@ -297,7 +297,7 @@ video {
     color: #fff;
     font-size: 1.2rem; }
   .project-text:hover {
-    opacity: 1;
+    opacity: 1 !important;
     transform: translateY(10px); }
 
 .project-links {

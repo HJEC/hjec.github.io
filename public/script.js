@@ -50,18 +50,25 @@ $(document).ready(function() {
 
   /* Swap out the static images for videos in the project tiles */
   function swapStaticImages() {
-    $(this)
-      .find(".demo-jpg")
-      .toggle();
-    $(this)
-      .find(".demo-gif")
-      .toggle();
-    $(this)
-      .find("a")
-      .css("pointer-events", "auto");
+    let element = $(this);
+    if (!element.hasClass(".project-wrapper")) {
+      element.closest(".project-text").css({ opacity: 1 });
+      element = $(this).closest(".project-wrapper");
+    }
+    element.find(".demo-jpg").toggle();
+    element.find(".demo-gif").toggle();
+    element.find("a").css("pointer-events", "auto");
   }
-  $(".project-wrapper").hover(swapStaticImages());
-  $(".project-links").focus(swapStaticImages());
+
+  // jQuery event handlers to swap out the static jpg for gifs in projects section
+  $(".project-wrapper").hover(swapStaticImages);
+  $(".project-links > a").focus(swapStaticImages);
+
+  // Resetting the project-text element opacity to zero when un-focused
+  $(".project-links > a").blur(function() {
+    let element = $(this);
+    element.closest(".project-text").css({ opacity: 0 });
+  });
 
   // flip more-soon card animation
   $(".more-soon").hover(function() {

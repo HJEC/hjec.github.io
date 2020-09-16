@@ -377,7 +377,7 @@ video {
   opacity: 0;
   transition: opacity 0.8s ease, transform 0.5s ease;
   &:hover {
-    opacity: 1;
+    opacity: 1 !important;
     transform: translateY(10px);
   }
 }
