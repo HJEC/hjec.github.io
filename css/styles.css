@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
-body, section, footer {
+body, header,
+main,
+section, footer {
   display: flex;
   flex-direction: column;
   align-items: center; }
@@ -20,14 +22,22 @@ html {
 body {
   background-color: #f9f9f9; }
 
+header,
+main,
 section {
   width: 80%;
   margin: 5% auto; }
   @media screen and (min-width: 650px) {
+    header,
+    main,
     section {
       width: 60%; } }
 
+address {
+  display: inline; }
+
 .home-button {
+  margin: 0;
   position: fixed;
   display: none;
   top: 5px;
@@ -40,6 +50,8 @@ section {
     color: #005aff; }
   .home-button i {
     font-size: 3rem; }
+  .home-button:after {
+    content: ""; }
 
 h2 {
   font-size: 3rem;
@@ -163,13 +175,17 @@ p a {
     transform: translateY(0%);
     opacity: 1; } }
 
-.accordion {
+button {
+  font-size: 3rem;
+  margin: 15px;
+  background: none;
+  border: none;
   cursor: pointer;
   transition: transform 0.4s ease, color 0.4s ease; }
-  .accordion:hover {
+  button:hover {
     transform: scale(1.1) translate(5px, 5px);
     color: #ffa500; }
-  .accordion:after {
+  button:after {
     content: "\02795";
     font-size: 1rem;
     color: #000;
@@ -186,13 +202,15 @@ p a {
   height: 0px;
   overflow: hidden;
   text-align: justify;
-  transition: height 0.6s ease-out; }
+  transition: height 0.6s ease-out;
+  max-width: 750px;
+  margin: 0px 20px 0px 20px; }
 
 .tools-grid {
   height: 0px;
   transition: height 0.5s ease-out;
   overflow: hidden;
-  max-width: 700px; }
+  max-width: 750px; }
   .tools-grid p {
     text-align: justify;
     margin: 20px; }
@@ -383,6 +401,9 @@ footer {
     border-radius: 3px; }
     footer .fab:hover {
       transform: scale(1.2); }
+    @media screen and (max-width: 640px) {
+      footer .fab {
+        padding: 7px; } }
   footer .fa-angellist:hover {
     background-color: #000; }
   footer .fa-linkedin:hover {

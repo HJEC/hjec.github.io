@@ -1,9 +1,9 @@
 $(document).ready(function() {
   // Seperate the header letters into individual spans. (cleaner markup)
-  let target = $("#title-name");
-  target.html(
-    target.text().replace(/./g, `<span class="hover-letter">$&</span>`)
-  );
+  // let target = $("#title-name");
+  // target.html(
+  //   target.text().replace(/./g, `<span class="hover-letter">$&</span>`)
+  // );
 
   // home button scroll-to-top
   $(window).scroll(function() {
@@ -36,8 +36,9 @@ $(document).ready(function() {
   parallaxFade();
   $(window).resize(parallaxFade);
 
-  // Scripting the accordion slide for about section
-  $(".accordion").click(function() {
+  // Trigger accordion-style slide when "about" section buttons are activated
+
+  $("main > button").click(function() {
     $(this).toggleClass("active");
     let p = $(this).next();
     if (p.css("height") != "0px") {
@@ -48,7 +49,7 @@ $(document).ready(function() {
   });
 
   /* Swap out the static images for videos in the project tiles */
-  $(".project-wrapper").hover(function() {
+  function swapStaticImages() {
     $(this)
       .find(".demo-jpg")
       .toggle();
@@ -58,7 +59,9 @@ $(document).ready(function() {
     $(this)
       .find("a")
       .css("pointer-events", "auto");
-  });
+  }
+  $(".project-wrapper").hover(swapStaticImages());
+  $(".project-links").focus(swapStaticImages());
 
   // flip more-soon card animation
   $(".more-soon").hover(function() {

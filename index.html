@@ -69,12 +69,26 @@
         ]
       }
     </script>
-    <div class="home-button">
+    <button class="home-button">
       <i class="fas fa-home"></i>
-    </div>
+    </button>
     <div class="intro-wrapper" id="intro">
-      <section class="intro">
-        <div id="title-name">HENRY CROOKES</div>
+      <header class="intro">
+        <div id="title-name">
+          <span class="hover-letter">H</span>
+          <span class="hover-letter">E</span>
+          <span class="hover-letter">N</span>
+          <span class="hover-letter">R</span>
+          <span class="hover-letter">Y</span>
+          <span class="hover-letter">&nbsp;</span>
+          <span class="hover-letter">C</span>
+          <span class="hover-letter">R</span>
+          <span class="hover-letter">O</span>
+          <span class="hover-letter">O</span>
+          <span class="hover-letter">K</span>
+          <span class="hover-letter">E</span>
+          <span class="hover-letter">S</span>
+        </div>
         <nav>
           <a
             href="https://linkedin.com/in/henry-crookes"
@@ -100,9 +114,11 @@
           >
             <i class="fab fa-instagram slide-link"></i
           ></a>
-          <a href="mailto:hjec92@gmail.com" target="_blank" title="Email me!">
-            <i class="fab fas fa-at slide-link"></i
-          ></a>
+          <address>
+            <a href="mailto:hjec92@gmail.com" target="_blank" title="Email me!">
+              <i class="fab fas fa-at slide-link"></i
+            ></a>
+          </address>
         </nav>
         <a
           href="public/henry_crookes_cv.pdf"
@@ -112,15 +128,15 @@
         >
           resumé</a
         >
-        <div class="intro-dude"></div>
+        <div class="svg_animation"></div>
 
         <a href="#about" rel="nofollow noreferrer noopener"
           ><i class="fas fa-chevron-down"></i
         ></a>
-      </section>
+      </header>
     </div>
-    <section class="about" id="about">
-      <h2 class="accordion">who?</h2>
+    <main class="about" id="about">
+      <button type="button">who?</button>
       <p class="about-text">
         <em>Hey there, </em> I'm Henry J. E. Crookes.<br /><br />
         A <strong>Full-Stack Web-Developer</strong> by trade, U.K native and
@@ -129,7 +145,7 @@
         with expressive faces, and making useful and pointless websites.<br />
       </p>
 
-      <h2 class="accordion">what?</h2>
+      <button type="button">what?</button>
       <p class="about-text">
         Thank you for checking out my site.<br />
         <br />
@@ -141,17 +157,17 @@
         web-development skills, and so this entire site is built with pure
         HTML5, CSS3, Javascript and jQuery.<br /><br />
         If you want to see my experience with newer, more impressive
-        technologies such as Vue, React, mySQL, AWS etc, I believe my
+        technologies such as Vue, React, postgreSQL, AWS etc, I believe my
         <a href="#projects" rel="nofollow noreferrer noopener"
           >portfolio projects</a
         >
         will speak for themselves.
       </p>
 
-      <h2 class="accordion">when?</h2>
+      <button type="button">when?</button>
       <p class="about-text">
-        I have been working with coding for the web for around a year now. In
-        February 2020, I graduated from
+        I have been working with coding for the web for since early 2019. In
+        February 2020, I graduated from an intensive 3-month FullStack course at
         <strong
           ><a
             href="https://spiced-academy.com/en/"
@@ -160,10 +176,12 @@
             >Spiced-Academy</a
           ></strong
         >
-        after an intensive 3-month bootcamp to strengthen my skills in
-        fundamental design and programming.
+        . <br /><br />
+        During the course I strengthened my fundamental web-design abilities and
+        refined my skills in programming, team-collaboration and industry
+        practices.
       </p>
-      <h2 class="accordion">why?</h2>
+      <button type="button">why?</button>
       <p class="about-text">
         Good question. <br /><br />
         Web Development is a challenge, and a creative outlet. I like to create
@@ -174,7 +192,7 @@
         writing. I believe that designing for the web is the perfect focal point
         of all of my disciplines.
       </p>
-      <h2 class="accordion">how?</h2>
+      <button type="button">how?</button>
       <div class="tools-grid">
         <p>
           Employing a diverse range of technologies, I create
@@ -234,7 +252,7 @@
           </div>
         </div>
       </div>
-    </section>
+    </main>
     <section class="projects" id="projects">
       <h2>projects</h2>
       <!-- 95-chat -->
@@ -536,7 +554,7 @@
       integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
       crossorigin="anonymous"
     ></script>
-    <script type="text/javascript" src="public/intro-guy.js"></script>
+    <script type="text/javascript" src="public/svg_animation.js"></script>
     <script type="text/javascript" src="public/script.js"></script>
   </body>
 </html>

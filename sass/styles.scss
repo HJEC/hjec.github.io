@@ -43,7 +43,7 @@ $text-shadow: -1px -1px 0 #ffa500, 1px -1px 0 #ffa500, -1px 1px 0 #ffa500,
 // FONTS
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
 
-// GENERAL SETTINGS
+// GENERIC TAGS
 html {
   scroll-behavior: smooth;
 }
@@ -66,6 +66,8 @@ body {
   @extend %flex-center-column;
 }
 
+header,
+main,
 section {
   width: 80%;
   margin: 5% auto;
@@ -74,8 +76,12 @@ section {
     width: 60%;
   }
 }
+address {
+  display: inline;
+}
 
 .home-button {
+  margin: 0;
   position: fixed;
   display: none;
   top: 5px;
@@ -89,6 +95,9 @@ section {
   }
   i {
     font-size: 3rem;
+  }
+  &:after {
+    content: "";
   }
 }
 
@@ -213,7 +222,11 @@ p a {
 
 // ABOUT SECTION
 
-.accordion {
+button {
+  font-size: 3rem;
+  margin: 15px;
+  background: none;
+  border: none;
   cursor: pointer;
   transition: transform 0.4s ease, color 0.4s ease;
   &:hover {
@@ -241,6 +254,8 @@ p a {
   overflow: hidden;
   text-align: justify;
   transition: height 0.6s ease-out;
+  max-width: 750px;
+  margin: 0px 20px 0px 20px;
 }
 
 // TOOLS SECTION
@@ -249,7 +264,7 @@ p a {
   height: 0px;
   transition: height 0.5s ease-out;
   overflow: hidden;
-  max-width: 700px;
+  max-width: 750px;
   p {
     text-align: justify;
     margin: 20px;
@@ -489,6 +504,9 @@ footer {
     border-radius: 3px;
     &:hover {
       transform: scale(1.2);
+    }
+    @media screen and (max-width: 640px) {
+      padding: 7px;
     }
   }
   .fa-angellist:hover {
