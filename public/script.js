@@ -38,13 +38,13 @@ $(document).ready(function() {
 
   // Trigger accordion-style slide when "about" section buttons are activated
 
-  $("main > button").click(function() {
+  $(".accordion-button").click(function() {
     $(this).toggleClass("active");
-    let p = $(this).next();
-    if (p.css("height") != "0px") {
-      p.css({ height: "0px" });
+    let nextElement = $(this).next();
+    if (nextElement.css("height") != "0px") {
+      nextElement.css({ height: "0px" });
     } else {
-      p.css({ height: p[0].scrollHeight + "px" });
+      nextElement.css({ height: nextElement[0].scrollHeight + "px" });
     }
   });
 
